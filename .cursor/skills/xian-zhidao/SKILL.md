@@ -7,6 +7,8 @@ description: >-
   adds or updates 自閉症 news, 文獻, 家長資訊, 教育局, 社署, 支援中心, papers,
   or asks to translate or analyze verified autism sources. Also use for the weekly
   Julius Sin update, including 每星期更新, 本週更新, and refreshing js/news.js.
+  Also use when editing the parent screening page (check.html, SDQ, 初步篩檢,
+  檢查孩子, 特殊學習需要 screening).
 ---
 
 # Julius Sin
@@ -14,6 +16,11 @@ description: >-
 給家長看的自閉症資訊。網站名叫 Julius Sin（前稱「先知道」）。正文用繁體中文，語氣是家長對家長：句子短，不寫成醫學講義，不恐嚇。
 
 孩子的姓名、學校、診斷細節不寫進網站或卡片。
+
+## 這個網站有什麼
+
+- `index.html`：首頁，由新到舊的家長卡片，資料在 `js/news.js`，由 `js/app.js` 渲染。
+- `check.html`：家長初步篩檢頁（SDQ 家長版）。規矩見「初步篩檢頁」一節。
 
 ## 做什麼
 
@@ -110,6 +117,20 @@ description: >-
 6. 把「本頁整理日期」改成今天。
 7. 本週沒有通過的新資料時，仍更新日期，並說明本週沒有新的可收資料。不為了有更新而虛構一則。
 8. 在觀察檔寫一筆本週記錄，做法見「觀察檔」一節。
+
+## 初步篩檢頁
+
+網站有一頁給家長的初步篩檢：`check.html`，題目和計分資料在 `js/sdq-data.js`，互動在 `js/check.js`。首頁導航有入口。
+
+現在用的是 **SDQ 長處和困難調查表（家長版，4–17 歲）**：25 題，五個範疇（情緒、品行、專注力／過度活躍、朋輩、親社會長處）加困難總分。題目和中文版照錄官方網站 [sdqinfo.org](https://www.sdqinfo.org/py/sdqinfo/b3.py?language=Chinese)（香港中文大學等翻譯及驗證），計分和切點按[官方說明](https://www.sdqinfo.org/c1.html)。© Robert Goodman, 2005，非商業免費使用，頁尾已註明。
+
+這頁的規矩，跟卡片一樣嚴：
+
+- **只用官方驗證過的問卷**。題目逐字照錄官方版本，不改寫、不自編題目。換問卷或改題目前，先打開官方原文核對。
+- **計分照官方說明**，包括反向計分題（第 7、11、14、21、25 題）和每個範疇的切點。改動前先核對原文。
+- **不寫成診斷**。頁面和結果都說明這只是初步觀察，不能判斷孩子有沒有特殊學習需要；評估和診斷只有醫生、教育心理學家等專業人員能做。
+- **答案不離開瀏覽器**。計分全部在本機完成，不傳送、不儲存，不問孩子姓名。
+- **結果只給下一步**：分數偏高時列出香港實際可以問的門路（班主任／SENCO／學校社工、校本教育心理學家、衞生署兒童體能智力測驗服務、教育局）。電話和服務名稱要先核對官方頁才寫上去。
 
 ## 觀察檔
 
