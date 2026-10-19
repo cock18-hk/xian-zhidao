@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>初步篩檢：孩子有沒有需要留意的困難 — Julius Sin</title>
+    <meta
+      name="description"
+      content="給家長的初步篩檢：國際通用的「長處和困難調查表」（SDQ 家長版，4–17 歲），約 5 分鐘，25 題，全部在你的瀏覽器內完成，不傳送任何答案。結果不是診斷。"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <a class="skip" href="#quiz-section">跳到問題</a>
+    <header class="site-header">
+      <div class="wrap header-inner">
+        <a class="brand" href="index.html">Julius Sin</a>
+        <nav aria-label="頁面">
+          <a href="index.html#start">現在可以問</a>
+          <a href="index.html#latest">最新資訊</a>
+          <a href="check.html" aria-current="page">初步篩檢</a>
+          <a href="index.html#sources">資料來源</a>
+          <a href="index.html#about">關於</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="wrap check-intro">
+        <p class="kicker">給家長的初步篩檢</p>
+        <h1>孩子有沒有需要留意的困難？</h1>
+        <p class="lede">
+          這是國際通用的「長處和困難調查表」（SDQ 家長版，適合 4 至 17 歲），
+          由香港中文大學等翻譯及驗證中文版。25 題，大約 5 分鐘。
+          它幫你整理對孩子情緒、專注力、行為和朋輩相處的觀察，
+          作為要不要找學校或醫生進一步了解的參考。
+        </p>
+        <div class="notice">
+          <p><b>這份問卷做不到的事：</b>它不是診斷，也不能直接告訴孩子有沒有特殊學習需要（SEN）。只有醫生、教育心理學家等專業人員才能評估和診斷。</p>
+          <p><b>你的答案去了哪裡：</b>哪裡都不去。計分全部在你的瀏覽器內完成，這個網站沒有伺服器，不會傳送或儲存你的答案。請不要填寫孩子的姓名。</p>
+          <p><b>怎樣填：</b>根據孩子<b>過去六個月</b>的日常表現，每題選「不真實」、「有點真實」或「完全真實」。即使不太肯定，也請選最接近的一個，答齊 25 題。</p>
+        </div>
+      </section>
+
+      <section class="wrap" id="quiz-section" aria-label="問卷">
+        <div class="quiz-head">
+          <h2 class="section-title">25 題</h2>
+          <p class="mono" id="progress" aria-live="polite"></p>
+        </div>
+        <form id="quiz" onsubmit="return false;"></form>
+        <p id="warn" class="warn" hidden></p>
+        <button class="btn" id="submit" type="button">看結果</button>
+      </section>
+
+      <section class="wrap result" id="result" hidden></section>
+
+      <section class="wrap prose next-who">
+        <h2 class="section-title">如果想找專業跟進，可以問誰</h2>
+        <div class="who-list">
+          <article>
+            <h3>先問學校</h3>
+            <p>班主任、特殊教育需要統籌主任（SENCO）、學生輔導人員或學校社工。學校會按「先支援、後評估」原則觀察和支援，有需要時轉介校本教育心理學家。公營小學每年 12 月至 1 月還會為小一學生填寫學習情況量表，及早識別。</p>
+          </article>
+          <article>
+            <h3>懷疑發展問題，問醫生</h3>
+            <p>如擔心有自閉症、注意力不足／過度活躍等發展問題，可經家庭醫生或母嬰健康院轉介衞生署兒童體能智力測驗服務（主要服務 12 歲以下兒童），電話 2246 6659。</p>
+          </article>
+          <article>
+            <h3>教育局</h3>
+            <p>一般查詢 2891 0088；教育心理服務（香港及九龍）3698 4321、（新界）2437 7270。SEN 政策和支援資料見「融合教育及特殊教育資訊網站」（sense.edb.gov.hk）。</p>
+          </article>
+        </div>
+        <p class="muted">
+          問卷題目 © Robert Goodman, 2005，非商業用途可免費使用。
+          題目及中文版取自官方網站 <a href="https://www.sdqinfo.org/py/sdqinfo/b3.py?language=Chinese">sdqinfo.org</a>；
+          計分方法按官方說明（<a href="https://www.sdqinfo.org/c1.html">計分說明</a>，英文）。
+        </p>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="wrap">Julius Sin · 家長先看原文，再決定要不要問</div>
+    </footer>
+
+    <script src="js/sdq-data.js"></script>
+    <script src="js/check.js"></script>
+  </body>
+</html>
