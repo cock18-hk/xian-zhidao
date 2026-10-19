@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 420" fill="none">
+  <rect width="640" height="420" rx="36" fill="#E5F3F0"/>
+  <circle cx="528" cy="72" r="36" fill="#F6C56A"/>
+  <rect x="236" y="28" width="150" height="104" rx="14" fill="#FFFDF9" stroke="#24312F" stroke-width="3"/>
+  <path d="M311 28v104M236 80h150" stroke="#24312F" stroke-width="3"/>
+  <rect x="58" y="300" width="524" height="20" rx="10" fill="#D0894C"/>
+  <rect x="92" y="320" width="16" height="58" rx="6" fill="#A86B38"/>
+  <rect x="532" y="320" width="16" height="58" rx="6" fill="#A86B38"/>
+  <rect x="214" y="168" width="176" height="120" rx="14" fill="#FFFDF9" stroke="#24312F" stroke-width="3"/>
+  <path d="M238 202h124M238 226h100M238 250h78" stroke="#14756C" stroke-width="7" stroke-linecap="round"/>
+  <circle cx="132" cy="156" r="30" fill="#F6C7A8" stroke="#24312F" stroke-width="3"/>
+  <path d="M110 146c8-20 36-20 46-2" stroke="#24312F" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="122" cy="156" r="3" fill="#24312F"/>
+  <circle cx="142" cy="156" r="3" fill="#24312F"/>
+  <path d="M122 170c6 6 16 6 22 0" stroke="#24312F" stroke-width="2.5" stroke-linecap="round"/>
+  <rect x="98" y="188" width="68" height="112" rx="28" fill="#14756C" stroke="#24312F" stroke-width="3"/>
+  <path d="M166 214c36 8 52 18 58 16" stroke="#F6C7A8" stroke-width="16" stroke-linecap="round"/>
+  <circle cx="500" cy="178" r="24" fill="#F6C7A8" stroke="#24312F" stroke-width="3"/>
+  <path d="M484 170c6-16 30-14 36 2" stroke="#24312F" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="492" cy="178" r="2.6" fill="#24312F"/>
+  <circle cx="508" cy="178" r="2.6" fill="#24312F"/>
+  <path d="M492 190c5 5 12 5 17 0" stroke="#24312F" stroke-width="2.5" stroke-linecap="round"/>
+  <rect x="474" y="204" width="52" height="96" rx="24" fill="#E37B62" stroke="#24312F" stroke-width="3"/>
+  <path d="M474 230c-28 10-42 18-46 14" stroke="#F6C7A8" stroke-width="14" stroke-linecap="round"/>
+  <rect x="46" y="236" width="26" height="32" rx="6" fill="#C9844A" stroke="#24312F" stroke-width="3"/>
+  <ellipse cx="59" cy="222" rx="20" ry="14" fill="#2F9A68" stroke="#24312F" stroke-width="3"/>
+  <ellipse cx="44" cy="208" rx="12" ry="10" fill="#3CAF78" stroke="#24312F" stroke-width="3"/>
+  <ellipse cx="76" cy="206" rx="11" ry="10" fill="#1F8A62" stroke="#24312F" stroke-width="3"/>
+</svg>

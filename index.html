@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>先知道 — 給家長的自閉症最新資訊</title>
+    <meta
+      name="description"
+      content="給家長看的自閉症最新資訊。每則都連回原文，並寫明現在用不用得上。"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <a class="skip" href="#latest">跳到最新資訊</a>
+    <header class="site-header">
+      <div class="wrap header-inner">
+        <a class="brand" href="#latest">先知道</a>
+        <nav aria-label="頁面">
+          <a href="#start">現在可以問</a>
+          <a href="#latest">最新資訊</a>
+          <a href="#sources">資料來源</a>
+          <a href="#about">關於</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero wrap" id="top">
+        <div class="hero-copy">
+          <p class="kicker">給家長</p>
+          <h1>自閉症最新資訊</h1>
+          <p class="lede">
+            每則都有日期和原文。香港的事情會寫可以問誰。其他地方的文獻譯成中文，並寫明家裡現在用不用做。
+          </p>
+          <p class="tally" id="tally"></p>
+        </div>
+        <img
+          class="hero-art"
+          src="img/hero.svg"
+          alt="一位家長和孩子坐在桌前，一起看一張資料"
+        />
+      </section>
+
+      <section class="wrap start" id="start">
+        <h2>現在可以問</h2>
+        <p class="section-lead">香港的政策和服務。點一則，就看到可以問誰。</p>
+        <div id="start-list" class="start-list"></div>
+      </section>
+
+      <section class="wrap feed-section" id="latest" aria-live="polite">
+        <div class="feed-head">
+          <h2>由新到舊</h2>
+          <p>研究也排在這裡。看完不用在家跟著做。</p>
+        </div>
+        <div id="filters" class="filters" role="group" aria-label="按分類篩選"></div>
+        <div id="feed" class="feed"></div>
+        <p id="empty" class="empty" hidden>這個分類還沒有資料。</p>
+      </section>
+
+      <section class="band" id="sources">
+        <div class="wrap prose">
+          <h2>資料來源</h2>
+          <p class="section-lead">只收打得開、核對過的原文。摘要是我們寫的，不轉載全文。</p>
+          <div class="source-grid">
+            <article>
+              <img src="img/service.svg" alt="" />
+              <h3>香港，現在可以問</h3>
+              <p>教育局通函、社會福利署的支援中心名單，以及協康會、香港耀能協會、新生精神康復會「朗程牽」、循道衛理楊震社會服務處、救世軍 PATH 的官方頁。</p>
+            </article>
+            <article>
+              <img src="img/research.svg" alt="" />
+              <h3>其他地方的文獻</h3>
+              <p>官方文件、機構新聞稿，以及可打開的論文。世界衛生組織和各地衛生、教育部門都在這列。</p>
+            </article>
+            <article>
+              <img src="img/sources.svg" alt="" />
+              <h3>這些不單獨收</h3>
+              <p>商業招生、賣療程的文章不單獨收。出處核對不到的文獻不收。</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="wrap prose split" id="about">
+        <img src="img/about.svg" alt="" />
+        <div>
+        <h2>關於</h2>
+        <p>
+          先知道把公開的自閉症資料整理給家長看。研究會標明仍是研究。政策和服務會寫下一步可以問誰。
+        </p>
+        <p>這裡不取代醫生、學校或評估，也不公開任何孩子的個人資料。</p>
+        <p class="updated">本頁整理日期：2026年10月18日。</p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="wrap">先知道 · 家長先看原文，再決定要不要問</div>
+    </footer>
+
+    <script src="js/news.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>
