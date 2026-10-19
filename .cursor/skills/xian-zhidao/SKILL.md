@@ -2,16 +2,16 @@
 name: xian-zhidao
 description: >-
   Curates real autism news, official documents, and research from Hong Kong
-  and other places into Traditional Chinese parent cards for the 先知道 site,
+  and other places into Traditional Chinese parent cards for the Julius Sin site,
   then analyzes each card with a fixed seven-part check. Use when the user
   adds or updates 自閉症 news, 文獻, 家長資訊, 教育局, 社署, 支援中心, papers,
   or asks to translate or analyze verified autism sources. Also use for the weekly
-  先知道 update, including 每星期更新, 本週更新, and refreshing js/news.js.
+  Julius Sin update, including 每星期更新, 本週更新, and refreshing js/news.js.
 ---
 
-# 先知道
+# Julius Sin
 
-給家長看的自閉症資訊。工作名稱是「先知道」。正文用繁體中文，語氣是家長對家長：句子短，不寫成醫學講義，不恐嚇。
+給家長看的自閉症資訊。網站名叫 Julius Sin（前稱「先知道」）。正文用繁體中文，語氣是家長對家長：句子短，不寫成醫學講義，不恐嚇。
 
 孩子的姓名、學校、診斷細節不寫進網站或卡片。
 

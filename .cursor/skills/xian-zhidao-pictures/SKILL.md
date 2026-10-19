@@ -1,12 +1,12 @@
 ---
 name: xian-zhidao-pictures
 description: >-
-  Draws lively, on-theme illustrations for the 先知道 parent autism news site.
+  Draws lively, on-theme illustrations for the Julius Sin parent autism news site.
   Use when the user asks for 圖片, 圖畫, 插圖, hero art, or to redraw img/ on
-  the 先知道 webpage. Do not use this skill to add or edit news cards.
+  the Julius Sin webpage. Do not use this skill to add or edit news cards.
 ---
 
-# 先知道的圖
+# Julius Sin 的圖
 
 這份只負責網頁上的圖。新聞卡片仍照 `xian-zhidao`。
 
