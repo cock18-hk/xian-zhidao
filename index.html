@@ -8,6 +8,12 @@
       name="description"
       content="給家長看的自閉症最新資訊。每則都連回原文，並寫明現在用不用得上。"
     />
+    <meta name="theme-color" content="#0d5c56" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-title" content="Julius Sin" />
+    <link rel="icon" type="image/svg+xml" href="img/icons/favicon.svg" />
+    <link rel="apple-touch-icon" href="img/icons/apple-touch-icon.png" />
+    <link rel="manifest" href="manifest.webmanifest" />
     <link rel="stylesheet" href="css/styles.css" />
   </head>
   <body>
@@ -19,7 +25,8 @@
           <a href="#start">現在可以問</a>
           <a href="#latest">最新資訊</a>
           <a href="check.html">初步篩檢</a>
-          <a href="#sources">資料來源</a>
+          <a href="guide.html">家長工具</a>
+          <a href="#download">下載</a>
           <a href="#about">關於</a>
         </nav>
       </div>
@@ -36,7 +43,10 @@
           <p class="tally" id="tally"></p>
           <p class="check-entry">
             想知道孩子有沒有需要留意的困難？
-            <a href="check.html">做 5 分鐘初步篩檢（答案不會傳走）</a>
+            <a href="check.html">做 5 分鐘初步篩檢</a>
+            或打開
+            <a href="guide.html">家長工具</a>
+            （答案不會傳走）。
           </p>
         </div>
         <img
@@ -60,6 +70,22 @@
         <div id="filters" class="filters" role="group" aria-label="按分類篩選"></div>
         <div id="feed" class="feed"></div>
         <p id="empty" class="empty" hidden>這個分類還沒有資料。</p>
+      </section>
+
+      <section class="wrap download" id="download">
+        <h2>下載到手機</h2>
+        <p class="section-lead">
+          同一個 Julius Sin：最新資訊、初步篩檢，以及原來的 Julius 家長工具。
+          加到主畫面之後，看起來就像 APP。答案只留在你這部機。
+        </p>
+        <div class="download-actions">
+          <a class="btn" href="guide.html">打開家長工具</a>
+          <button class="btn ghost" type="button" data-install hidden>下載到手機</button>
+        </div>
+        <p class="install-hint" id="install-hint">
+          Android：用 Chrome 打開這頁，按「下載到手機」。
+          iPhone：用 Safari 打開，按底部分享，再選「加入主畫面」。
+        </p>
       </section>
 
       <section class="band" id="sources">
@@ -92,6 +118,7 @@
         <h2>關於</h2>
         <p>
           Julius Sin 把公開的自閉症資料整理給家長看。研究會標明仍是研究。政策和服務會寫下一步可以問誰。
+          同一頁也有原來的 Julius 家長工具，可以加到手機主畫面。
         </p>
         <p>這裡不取代醫生、學校或評估，也不公開任何孩子的個人資料。</p>
         <p class="updated">本頁整理日期：2026年10月18日。</p>
@@ -105,5 +132,6 @@
 
     <script src="js/news.js"></script>
     <script src="js/app.js"></script>
+    <script src="js/pwa.js"></script>
   </body>
 </html>

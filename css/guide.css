@@ -1,0 +1,493 @@
+.guide {
+  --g-card: #ffffff;
+  --g-soft: #6b6b66;
+  --g-border: #e3e0d8;
+  --g-calm: #2e6f5c;
+  --g-calm-bg: #e4f0eb;
+  --g-warm: #b4522a;
+  --g-warm-bg: #fbeee8;
+  --g-blue: #375a8a;
+  --g-blue-bg: #e8eef7;
+  --g-focus: #1d5c47;
+  max-width: 46rem;
+  margin: 0 auto;
+  padding: 1.2rem 0 3rem;
+  display: grid;
+  gap: 14px;
+}
+.guide button {
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+}
+.guide button:focus-visible,
+.guide a:focus-visible,
+.guide textarea:focus-visible,
+.guide input:focus-visible {
+  outline: 3px solid var(--focus);
+  outline-offset: 3px;
+}
+.guide .top {
+  padding: 20px 16px 4px;
+  text-align: center;
+}
+
+.guide .top h1 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.guide .top p {
+  margin: 6px 0 0;
+  color: var(--g-soft);
+  font-size: 1rem;
+}
+
+.guide .card {
+  background: var(--g-card);
+  border: 2px solid var(--g-border);
+  border-radius: 18px;
+  padding: 16px;
+}
+
+.guide .notice {
+  background: var(--g-blue-bg);
+  border-color: var(--g-blue);
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+/* 步驟 */
+.guide .step-card { display: grid; gap: 12px; }
+.guide .step-head {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.guide .step-head h2 {
+  margin: 0;
+  font-size: 1.25rem;
+}
+.guide .num {
+  flex: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--g-calm);
+  color: #fff;
+  display: grid;
+  place-items: center;
+  font-size: 1.3rem;
+  font-weight: 800;
+}
+.guide .step-text {
+  margin: 0;
+  color: var(--g-soft);
+  line-height: 1.65;
+}
+.guide .sub-title {
+  font-weight: 800;
+  font-size: 1.02rem;
+  margin-top: 4px;
+}
+
+/* 觀察選項 */
+.guide .chips {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 8px;
+}
+.guide .chip {
+  min-height: 56px;
+  padding: 8px 10px;
+  border: 2px solid var(--g-border);
+  border-radius: 14px;
+  background: var(--g-card);
+  font-size: 0.95rem;
+  font-weight: 700;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  line-height: 1.35;
+}
+.guide .chip-icon { font-size: 1.3rem; flex: none; }
+.guide .chip.on {
+  border-color: var(--g-warm);
+  background: var(--g-warm-bg);
+}
+
+/* 觀察筆記 */
+.guide .notes {
+  width: 100%;
+  border: 2px solid var(--g-border);
+  border-radius: 14px;
+  padding: 12px;
+  font: inherit;
+  resize: vertical;
+  background: #fffdf8;
+}
+.guide .notes:focus-visible {
+  outline: 4px solid var(--g-focus);
+  outline-offset: 2px;
+}
+.guide .hint { color: var(--g-soft); font-size: 0.85rem; }
+
+/* 檢查 */
+.guide .ages {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 8px;
+}
+.guide .age {
+  min-height: 52px;
+  border-radius: 14px;
+  border: 2px solid var(--g-border);
+  background: var(--g-card);
+  font-size: 1rem;
+  font-weight: 800;
+}
+.guide .age.on { border-color: var(--g-blue); background: var(--g-blue-bg); }
+
+.guide .list { display: grid; gap: 8px; }
+
+.guide .check {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 14px;
+  border: 2px solid var(--g-border);
+  border-radius: 14px;
+  background: var(--g-card);
+}
+.guide .check.yes { border-color: var(--g-calm); }
+.guide .check.no { border-color: var(--g-warm); background: var(--g-warm-bg); }
+.guide .check .q { flex: 1; display: grid; gap: 2px; }
+.guide .check .domain {
+  font-size: 0.8rem;
+  font-weight: 800;
+  color: var(--g-soft);
+  letter-spacing: 0.05em;
+}
+.guide .check .text { font-size: 1.05rem; font-weight: 700; }
+.guide .check .ans { display: flex; gap: 6px; }
+.guide .check .ans button {
+  min-width: 72px;
+  min-height: 52px;
+  border-radius: 12px;
+  border: 2px solid var(--g-border);
+  background: var(--g-card);
+  font-weight: 800;
+  font-size: 0.95rem;
+}
+.guide .check .ans button.pick.yes { border-color: var(--g-calm); background: var(--g-calm-bg); }
+.guide .check .ans button.pick.no { border-color: var(--g-warm); background: var(--g-warm-bg); }
+
+.guide .result {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  border-color: var(--g-blue);
+  background: var(--g-blue-bg);
+}
+.guide .save-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 12px;
+}
+.guide .save {
+  min-height: 56px;
+  padding: 0 20px;
+  border-radius: 14px;
+  border: 2px solid var(--g-blue);
+  background: var(--g-card);
+  font-size: 1.05rem;
+  font-weight: 800;
+}
+.guide .save:disabled { opacity: 0.45; }
+
+/* 紀錄 */
+.guide .history { display: grid; gap: 10px; border-style: dashed; }
+.guide .h-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.guide .clear {
+  border: 2px solid var(--g-border);
+  background: var(--g-card);
+  border-radius: 10px;
+  padding: 6px 12px;
+  font-size: 0.85rem;
+  color: var(--g-soft);
+}
+.guide .h-row {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  flex-wrap: wrap;
+  padding: 10px 12px;
+  border: 2px solid var(--g-border);
+  border-radius: 12px;
+}
+.guide .h-date { font-weight: 800; }
+.guide .h-age {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--g-blue);
+  background: var(--g-blue-bg);
+  border-radius: 8px;
+  padding: 2px 8px;
+}
+.guide .h-count { color: var(--g-soft); }
+.guide .h-better {
+  margin-left: auto;
+  font-size: 0.85rem;
+  font-weight: 800;
+  color: var(--g-calm);
+  background: var(--g-calm-bg);
+  border-radius: 8px;
+  padding: 2px 8px;
+}
+.guide .h-detail {
+  flex-basis: 100%;
+  font-size: 0.9rem;
+  color: var(--g-soft);
+  line-height: 1.6;
+}
+
+/* 搵邊個 */
+.guide .contact {
+  display: flex;
+  gap: 12px;
+  padding: 12px 14px;
+  border: 2px solid var(--g-border);
+  border-radius: 14px;
+  align-items: flex-start;
+}
+.guide .c-icon { font-size: 1.8rem; line-height: 1.2; }
+.guide .c-body { display: grid; gap: 4px; }
+.guide .c-head {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  font-size: 1.05rem;
+}
+.guide .c-cost {
+  font-size: 0.8rem;
+  font-weight: 800;
+  color: var(--g-calm);
+  background: var(--g-calm-bg);
+  border-radius: 8px;
+  padding: 2px 8px;
+}
+.guide .c-body p { margin: 0; color: var(--g-soft); line-height: 1.6; }
+
+/* 搜尋 */
+.guide .search {
+  width: 100%;
+  min-height: 56px;
+  border: 2px solid var(--g-border);
+  border-radius: 14px;
+  padding: 0 14px;
+  font: inherit;
+  background: #fffdf8;
+}
+.guide .search:focus-visible {
+  outline: 4px solid var(--g-focus);
+  outline-offset: 2px;
+}
+
+/* 問題解答 */
+.guide .faq.open { border-color: var(--g-calm); }
+.guide .p-icon { margin-right: 6px; }
+.guide .steps {
+  margin: 0 0 10px;
+  padding-left: 22px;
+  display: grid;
+  gap: 8px;
+}
+.guide .steps li { line-height: 1.6; }
+.guide .remember {
+  background: var(--g-calm-bg);
+  border: 2px solid var(--g-calm);
+  border-radius: 12px;
+  padding: 10px 12px;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* 分析 */
+.guide .analysis {
+  border: 2px solid var(--g-border);
+  border-radius: 14px;
+  padding: 12px 14px;
+  display: grid;
+  gap: 8px;
+}
+.guide .a-head {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1.05rem;
+}
+.guide .analysis p {
+  margin: 0;
+  line-height: 1.65;
+  color: var(--g-soft);
+}
+.guide .a-tag {
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 800;
+  color: var(--g-warm);
+  background: var(--g-warm-bg);
+  border-radius: 8px;
+  padding: 1px 8px;
+  margin-right: 8px;
+}
+.guide .a-tag.go {
+  color: var(--g-calm);
+  background: var(--g-calm-bg);
+}
+
+/* 逐步分析 */
+.guide .help-toggle {
+  margin-top: 10px;
+  width: 100%;
+  min-height: 48px;
+  border: 2px dashed var(--g-warm);
+  background: var(--g-card);
+  border-radius: 12px;
+  font-weight: 800;
+  font-size: 0.98rem;
+  color: var(--g-warm);
+}
+.guide .step-analysis {
+  margin-top: 10px;
+  display: grid;
+  gap: 10px;
+}
+.guide .sa-item {
+  border: 2px solid var(--g-border);
+  border-radius: 12px;
+  padding: 10px 12px;
+  display: grid;
+  gap: 8px;
+}
+.guide .sa-step {
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+  font-weight: 700;
+  line-height: 1.5;
+}
+.guide .sa-num {
+  flex: none;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: var(--g-blue);
+  color: #fff;
+  display: grid;
+  place-items: center;
+  font-size: 0.85rem;
+  font-weight: 800;
+}
+.guide .sa-item p { margin: 0; line-height: 1.65; color: var(--g-soft); }
+.guide .sa-end {
+  border: 2px solid var(--g-blue);
+  background: var(--g-blue-bg);
+  border-radius: 12px;
+  padding: 10px 12px;
+  line-height: 1.65;
+  font-weight: 700;
+}
+
+/* FAQ */
+.guide .faq {
+  border: 2px solid var(--g-border);
+  border-radius: 14px;
+  overflow: hidden;
+}
+.guide .faq-q {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  padding: 14px;
+  background: var(--g-card);
+  border: none;
+  font-weight: 800;
+  font-size: 1.05rem;
+  text-align: left;
+}
+.guide .faq-arrow { font-size: 1.4rem; color: var(--g-soft); }
+.guide .faq-a {
+  margin: 0;
+  padding: 0 14px 14px;
+  color: var(--g-soft);
+  line-height: 1.7;
+}
+
+/* 原貌 */
+.guide .portrait-row {
+  display: grid;
+  gap: 4px;
+  padding: 10px 12px;
+  border: 2px solid var(--g-border);
+  border-radius: 12px;
+}
+.guide .portrait-row strong { font-size: 0.85rem; color: var(--g-calm); }
+.guide .portrait-row span { line-height: 1.6; }
+.guide .portrait-pills { display: flex; flex-wrap: wrap; gap: 8px; }
+.guide .pill {
+  display: inline-flex;
+  align-items: stretch;
+  border: 2px solid var(--g-blue);
+  background: var(--g-blue-bg);
+  border-radius: 12px;
+  overflow: hidden;
+}
+.guide .pill button {
+  border: none;
+  background: transparent;
+  font-weight: 800;
+  min-height: 44px;
+  padding: 6px 10px;
+}
+.guide .pill-x {
+  color: var(--g-soft);
+  border-left: 2px solid var(--g-blue) !important;
+  padding: 0 12px !important;
+}
+.guide .faq.asked { border-color: var(--g-blue); }
+
+/* 意見 */
+.guide .feedback {
+  display: block;
+  text-align: center;
+  padding: 14px 20px;
+  border: 2px solid var(--g-calm);
+  background: var(--g-calm-bg);
+  border-radius: 14px;
+  font-weight: 800;
+  font-size: 1.05rem;
+  text-decoration: none;
+  color: inherit;
+}
+
+.guide .footer {
+  text-align: center;
+  color: var(--g-soft);
+  font-size: 0.95rem;
+  line-height: 1.7;
+  padding: 8px 20px 4px;
+}
+
+@media (max-width: 860px) {
+  .guide .ages { grid-template-columns: repeat(3, 1fr); }
+  .guide .check { flex-direction: column; align-items: stretch; }
+}

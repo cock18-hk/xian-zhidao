@@ -8,7 +8,8 @@ description: >-
   or asks to translate or analyze verified autism sources. Also use for the weekly
   Julius Sin update, including 每星期更新, 本週更新, and refreshing js/news.js.
   Also use when editing the parent screening page (check.html, SDQ, 初步篩檢,
-  檢查孩子, 特殊學習需要 screening).
+  檢查孩子, 特殊學習需要 screening), the parent-tool page (guide.html,
+  家長工具, 家長第一步), or the installable PWA (下載到手機, manifest, service worker).
 ---
 
 # Julius Sin
@@ -19,8 +20,12 @@ description: >-
 
 ## 這個網站有什麼
 
-- `index.html`：首頁，由新到舊的家長卡片，資料在 `js/news.js`，由 `js/app.js` 渲染。
+Julius（家長工具 APP）和 Julius web（資訊站）已合成同一個 Julius Sin。一個網址，也可以加到手機主畫面。不上 Google Play / App Store。
+
+- `index.html`：首頁，由新到舊的家長卡片，資料在 `js/news.js`，由 `js/app.js` 渲染。頁內有「下載到手機」。
 - `check.html`：家長初步篩檢頁（SDQ 家長版）。規矩見「初步篩檢頁」一節。
+- `guide.html`：原來的 Julius APP「家長第一步」。觀察、年齡檢查、評估門路、管教做法。資料在 `js/guide-data.js`，互動在 `js/guide.js`。答案只存在本機。
+- `manifest.webmanifest` + `sw.js`：把整個網站做成可安裝的 APP。圖示在 `img/icons/`。
 
 ## 做什麼
 
@@ -131,6 +136,23 @@ description: >-
 - **不寫成診斷**。頁面和結果都說明這只是初步觀察，不能判斷孩子有沒有特殊學習需要；評估和診斷只有醫生、教育心理學家等專業人員能做。
 - **答案不離開瀏覽器**。計分全部在本機完成，不傳送、不儲存，不問孩子姓名。
 - **結果只給下一步**：分數偏高時列出香港實際可以問的門路（班主任／SENCO／學校社工、校本教育心理學家、衞生署兒童體能智力測驗服務、教育局）。電話和服務名稱要先核對官方頁才寫上去。
+
+## 家長工具頁
+
+`guide.html` 是原來的 Julius APP，現在住在同一個網站。記觀察、按年齡做簡單檢查、列出評估門路和管教做法。內容來自特殊教育文獻與行為治療講義，用家長語言寫，不是新聞卡片。
+
+這頁的規矩：
+
+- **不寫成診斷**。觀察和做法都不是評估結果。
+- **答案不離開這部機**。用本機 `localStorage`，不問孩子姓名，不上傳。
+- **不把研究或講義寫成家裡明天必須做的治療**。做法是家長可試的日常方法；無效就帶回評估。
+- 改這頁時，不要把新聞卡片的七欄分析套上去；也不要把這頁的做法寫進 `js/news.js`。
+
+## 下載到手機
+
+整個 Julius Sin 是同一個 APP。家長在手機瀏覽器打開，按「下載到手機」或「加入主畫面」。不上架商店。
+
+改離線快取名單時，同步改 `sw.js` 的 `ASSETS`，並把 `CACHE` 的版本號加一，否則舊快取不會更新。
 
 ## 觀察檔
 

@@ -1,0 +1,70 @@
+var CACHE = "julius-sin-v1";
+var ASSETS = [
+  "./",
+  "./index.html",
+  "./check.html",
+  "./guide.html",
+  "./css/styles.css",
+  "./css/guide.css",
+  "./js/app.js",
+  "./js/news.js",
+  "./js/check.js",
+  "./js/sdq-data.js",
+  "./js/guide.js",
+  "./js/guide-data.js",
+  "./js/pwa.js",
+  "./img/hero.svg",
+  "./img/service.svg",
+  "./img/research.svg",
+  "./img/sources.svg",
+  "./img/about.svg",
+  "./img/school.svg",
+  "./img/icons/icon-192.png",
+  "./img/icons/icon-512.png",
+  "./img/icons/apple-touch-icon.png",
+  "./img/icons/favicon.svg",
+  "./manifest.webmanifest"
+];
+
+self.addEventListener("install", function (event) {
+  event.waitUntil(
+    caches.open(CACHE).then(function (cache) {
+      return cache.addAll(ASSETS);
+    }).then(function () {
+      return self.skipWaiting();
+    })
+  );
+});
+
+self.addEventListener("activate", function (event) {
+  event.waitUntil(
+    caches.keys().then(function (keys) {
+      return Promise.all(
+        keys.filter(function (key) { return key !== CACHE; }).map(function (key) {
+          return caches.delete(key);
+        })
+      );
+    }).then(function () {
+      return self.clients.claim();
+    })
+  );
+});
+
+self.addEventListener("fetch", function (event) {
+  if (event.request.method !== "GET") return;
+  event.respondWith(
+    fetch(event.request).then(function (response) {
+      var copy = response.clone();
+      caches.open(CACHE).then(function (cache) {
+        cache.put(event.request, copy);
+      });
+      return response;
+    }).catch(function () {
+      return caches.match(event.request).then(function (cached) {
+        if (cached) return cached;
+        if (event.request.mode === "navigate") return caches.match("./index.html");
+        return Response.error();
+      });
+    })
+  );
+});

@@ -143,6 +143,28 @@ nav a:hover {
   color: var(--muted);
 }
 
+.download {
+  padding: 2.2rem 0 2.6rem;
+  scroll-margin-top: 4.5rem;
+}
+
+.download-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+  margin: 0.4rem 0 0.8rem;
+}
+
+.download .btn {
+  margin: 0;
+}
+
+.install-hint {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
 .section-lead {
   margin: 0.2rem 0 1rem;
   color: var(--muted);
@@ -150,6 +172,7 @@ nav a:hover {
 
 .start h2,
 .feed-head h2,
+.download h2,
 .prose h2 {
   margin: 0;
   font-family: "Cascadia Mono", "Cascadia Code", "Consolas", monospace;
