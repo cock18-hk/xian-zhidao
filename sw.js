@@ -1,4 +1,4 @@
-var CACHE = "julius-sin-v1";
+var CACHE = "julius-sin-v2";
 var ASSETS = [
   "./",
   "./index.html",
@@ -19,6 +19,9 @@ var ASSETS = [
   "./img/sources.svg",
   "./img/about.svg",
   "./img/school.svg",
+  "./img/check.svg",
+  "./img/guide.svg",
+  "./img/phone.svg",
   "./img/icons/icon-192.png",
   "./img/icons/icon-512.png",
   "./img/icons/apple-touch-icon.png",
